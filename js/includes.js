@@ -1,0 +1,48 @@
+﻿(function () {
+    // Stylesheets
+    System.css.include("css/control/button.css");
+    System.css.include("css/control/common.css");
+    System.css.include("css/control/menu.css");
+    System.css.include("css/control/tile.css");
+    System.css.include("css/control/video.css");
+    System.css.include("css/page/default.css");
+    // JavaScripts
+    System.js.include("js/configuration/settings.js");
+    System.js.include("js/utility/constant.js");
+    System.js.include("js/navigation/handler.js");
+    System.js.include("js/event/handler.js");
+    System.js.include("js/utility/http.js");
+    System.js.include("js/utility/page.js");
+    System.js.include("js/utility/constant.js");
+    System.js.include("js/application.js");
+    System.js.include("js/control/html/base.js");
+    System.js.include("js/control/html/div.js");
+    System.js.include("js/control/html/image.js");
+    System.js.include("js/control/html/video.js");
+    System.js.include("js/control/html/input.js");
+    System.js.include("js/control/base.js");
+    System.js.include("js/control/container.js");
+    System.js.include("js/control/tile.js");
+    System.js.include("js/control/imagetile.js");
+    System.js.include("js/control/logo.js");
+    System.js.include("js/control/list.js");
+    System.js.include("js/control/video.js");
+    System.js.include("js/control/button.js");
+    System.js.include("js/control/panel.js");
+    System.js.include("js/control/label.js");
+    System.js.include("js/control/dropdown.js");
+    System.js.include("js/control/dropdownitem.js");
+    System.js.include("js/control/panel.js");
+    System.js.include("js/control/grid.js");
+    System.js.include("js/control/review.js");
+    System.js.include("js/control/reviewstar.js");
+    System.js.include("js/control/carousel.js");
+    System.js.include("js/control/carousellist.js");
+    System.js.include("js/control/loading.js");
+    System.js.include("js/control/popup.js");
+    System.js.include("js/control/input.js");
+    System.js.include("js/control/component.js");
+    System.js.include("js/control/image.js");
+    System.js.include("js/page/base.js");
+    System.js.include("js/page/default.js");
+})();

@@ -1,0 +1,22 @@
+.button{
+	float: left;
+	width: 8%;
+	border-radius: .2em;
+	color: white;
+	margin-bottom:1%;
+	background:#868686;
+	padding:1%;
+	left:0;
+	position:relative;
+	text-align:center;
+	font-size:1.6em;
+	margin-top: 2%;
+}
+
+
+.control.btn.focused{
+	-webkit-transform:none;
+	border:none;
+	background:#026BBE;
+}
+

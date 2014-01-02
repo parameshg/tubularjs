@@ -1,0 +1,186 @@
+/* changes made for tubular Home video Page */
+
+.video{
+	background:#000 !important;
+	margin-left:auto;
+	margin-right:auto;	
+	position:relative;	
+}
+
+.video video{
+	width:100%;
+	height:100%;
+}
+
+.control #caption{
+	position: absolute;
+	bottom: 0%;
+	right: 0%;
+	border: none;
+	width: 8%;
+	float: right;
+	left: 82%;
+}
+	
+.control #expand{
+	position: absolute;
+	bottom: 0%;
+	right: 0%;
+	border: none;
+	width: 8%;
+	float: right;
+	left: 92%;
+}
+
+.control #overlay
+	{
+	float: left;
+	position: absolute;
+	bottom: 13.53%;
+	left: 7.47%;
+	font-size: 1.70em;
+	background-color: #E3E3E3;
+	text-align: center;
+	padding: 0.1% 0%;
+}
+	
+
+#home-video-fullscreen #overlay	{
+	float: left;
+	position: absolute;
+	bottom: 13.7%;
+	left: 7.61%;
+	font-size: 2.80em;
+	background-color: #E3E3E3;
+	padding: 0.3% 0.4%;
+	text-align: center;
+}
+/* video buttons - 07/02/13 */
+
+.video-minimise 
+{
+    display: block;
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    float: left;
+    /*background: #333;
+    opacity: 0.7;*/
+}
+.video-minimise-background
+{
+    background: #333;
+    opacity: 0.7;
+    padding-top:0%; 
+    height:7.3%;   
+}
+.videoactive , .videoinactive 
+{
+    padding: 0 0.5%;
+    width:4%; 
+    float:right;
+    
+}
+.expand_active, .cc_active
+{
+	width:5.5%;
+	float:right;
+}
+.expand_active , .cc_active
+{
+    padding: 0 2%;    
+}
+.videoactive 
+{
+    display:block;
+}
+.videoinactive
+{
+    display:none;
+}
+
+.carouselVideo{
+	width:50%;
+	position:relative;
+}
+.carouselVideo video {
+    width:100%;
+    background-color:#000;
+    display:block;
+    float:left;
+   /* border-radius: 0.4em;*/
+    border:0.4em solid #868686;
+}
+.carouselVideo.videozoom .video-left-inner video 
+{
+    border:0.4em solid #026BBE;
+}
+.carouselVideo h3 {
+	float:left;
+}
+.carouselVideo p {
+	margin:0;
+	padding:0;
+	float:left;
+}
+
+.video-left-inner 
+{
+    margin:20% 0 0 0 ;
+    width:84.1%;
+    float:left;
+}
+
+.fullscreen , .productVideo.test
+{
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+.fullscreen .productVideoControl , .fullscreen .videozoom 
+{
+    background:none;
+}
+.fullscreen , .carouselVideo.fullscreen video 
+{
+    width:100%;
+    height:99.5%;
+    position:absolute;
+    top:0;
+    left:0;
+    border:none !important;
+    outline:none !important;
+    background:#000;
+}
+
+.disclaimer{
+    color: #777;
+    font-size: 1.0em;
+    font-weight:normal;
+    float: left;
+	margin-top: 12%;
+	line-height:1em;
+}
+
+.overrelay
+{
+	position: absolute;
+	left: 10%;
+	bottom: 12%;
+	display: block;
+	background: #e3e3e3;
+	width: 22%;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 0.7em;
+	line-height: normal;
+}
+
+.video-fs .overrelay
+{
+	
+	width: 16%;
+	font-size: 1.7em;
+}

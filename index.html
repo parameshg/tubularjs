@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TubularJS Single-Page HTML5 Smart TV Application</title>
+<script type="text/javascript">
+    var load = function () {
+        System.application = new System.Application();
+        //TODO: Generate unique session ID
+        System.application.session("todo_generate_unique_id");
+        System.utility.page.load(System.utility.constant.page.home());
+    };
+    window.onkeydown = function (e) {
+        switch (e.keyCode) {
+            case 38:
+            case 29460:
+                System.event.handler.execute("up");
+                break;
+            case 40:
+            case 29461:
+                System.event.handler.execute("down");
+                break;
+            case 4:
+            case 37:
+                System.event.handler.execute("left");
+                break;
+            case 5:
+            case 39:
+                System.event.handler.execute("right");
+                break;
+            case 13:
+            case 29443:
+                System.event.handler.execute("click");
+                break;
+        }
+    };
+</script>
+</head>
+<body onload="load();">
+<div id='app-container'>
+</div>
+<link rel='stylesheet' type='text/css' href='tubular.css'></link>
+<link rel='stylesheet' type='text/css' href='default.css'></link>
+<script type='text/javascript' src='tubular.js'></script>
+<script type='text/javascript' src='default.js'></script>
+</body>
+</html>
