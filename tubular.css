@@ -1,0 +1,696 @@
+/*
+* The MIT License (MIT)
+* 
+* Copyright (c) 2014 Paramesh Gunasekaran, Charuvahan Adhivarahan, 
+* Sharmila Durairaj, Muralidharan Pakkirisamy, Baseer Oli and other contributors
+* 
+* http://www.tubularjs.com/license
+* 
+* Permission is hereby granted, free of charge, to any person obtaining a copy of this software and 
+* associated documentation files (the “Software”), to deal in the Software without restriction, 
+* including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, 
+* and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, 
+* subject to the following conditions:
+* 
+* The above copyright notice and this permission notice shall be included in all copies or 
+* substantial portions of the Software.
+* 
+* THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
+* INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
+* IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, 
+* WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR 
+* THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+/************************************************** button.css **************************************************/
+.button{
+	float: left;
+	width: 8%;
+	border-radius: .2em;
+	color: white;
+	margin-bottom:1%;
+	background:#868686;
+	padding:1%;
+	left:0;
+	position:relative;
+	text-align:center;
+	font-size:1.6em;
+	margin-top: 2%;
+}
+.control.btn.focused{
+	-webkit-transform:none;
+	border:none;
+	background:#026BBE;
+}
+/************************************************** common.css **************************************************/
+@font-face 
+{
+    font-family:'tubularfont';
+    font-weight:normal;
+    font-style:normal;
+}
+@media screen and (min-width: 250px) {
+    body{font-size: 25%;}
+}
+@media screen and (min-width: 400px) {
+    body{font-size: 50%;}
+}
+@media screen and (min-width: 650px) {
+    body{font-size: 60%;}
+}
+@media screen and (min-width: 800px) {
+    body{font-size: 70%;}
+}
+@media screen and (min-width: 950px) {
+    body{font-size: 80%;}
+}
+@media screen and (min-width: 1025px) {
+    body{font-size: 85%;}
+}
+@media screen and (min-width: 1100px) {
+    body{font-size: 90%;}
+}
+@media screen and (min-width: 1280px) {
+    body{font-size: 100%;}
+}
+body {
+	background-position:center center;
+   	background-color:#eeeeee;
+    font: 75%/1.5;
+	line-height:22px;
+    margin: 0;
+    padding: 0;
+	font-family:tubularfont, Arial , Helvetica ;
+	font-weight:bold;
+	overflow:hidden;
+	}
+a:hover , a:active , a:focus , a#TodaySpecialImage:hover , a#TodaySpecialImage:hover h3
+{
+    text-decoration:none;  
+}
+html {
+	margin:0;
+	padding:0;
+	border:0;
+	height:100%;}
+body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, code,
+del, dfn, em, img, q, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, dialog, figure, footer, header,
+hgroup, nav, section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, dialog,
+footer, header, hgroup, menu, nav, section {
+    display:block;
+	}
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+	}
+caption, th, td {
+	text-align: left;
+	font-weight: bold;
+	float:none !important;
+	}
+table, th, td {
+	vertical-align: middle;
+	}
+blockquote:before, blockquote:after, q:before, q:after { content: ''; }
+blockquote, q { quotes: "" ""; }
+a img { border: none; }
+a:active , input:active  { outline:0 none; }
+-------------------------------------------------------------- */
+h1,h2,h3,h4,h5,h6 { font-weight: normal;  }
+h1 { font-size: 3em; line-height: 1; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.5em; line-height: 1; }
+h5 { font-size: 1em; font-weight: bold; }
+h6 { font-size: 1em; font-weight: bold; }
+h1 img, h2 img, h3 img,
+h4 img, h5 img, h6 img {
+  margin: 0;
+}
+-------------------------------------------------------------- */
+  These can be used to pull an image at the start of a paragraph, so
+  that the text flows around it (usage: <p><img class="left">Text</p>)
+.left       { float: left !important; }
+.right      { float: right !important; }
+.wdth-auto { width:auto !important; }
+.mrgn-top { margin-top:10px !important; }
+.mrgn-rht { margin-right:10px !important; }
+.aln-cntr { text-align:center !important; }
+a:focus,
+a:hover     { color: #3189d3; text-decoration: underline; }
+a           { text-decoration: none; }
+blockquote  { margin: 1.5em; color: #666; font-style: italic; }
+strong,dfn  { font-weight: bold; }
+em,dfn      { font-style: italic; }
+sup, sub    { line-height: 0; }
+3abbr,
+acronym     { border-bottom: 1px dotted #666; }
+address     { margin: 0 0 1.5em; font-style: italic; }
+del         { color:#666; }
+pre         { margin: 1.5em 0; white-space: pre; }
+pre,code,tt { font: 1em 'andale mono', 'lucida console', monospace; line-height: 1.5; }
+-------------------------------------------------------------- */
+li ul,
+li ol  { margin: 0; }
+ul, ol { margin: 0;}
+ul     { list-style-type: none; }
+ol     { list-style-type: decimal; }
+dl     { margin: 0 0 1.5em 0; }
+dl dt  { font-weight: bold; }
+dd     { margin-left: 1.5em;}
+-------------------------------------------------------------- */
+  Because of the need for padding on TH and TD, the vertical rhythm
+  on table cells has to be 27px, instead of the standard 18px or 36px
+  of other elements.
+table         { margin-bottom: 1.4em; width:100%; }
+th            { font-weight: bold; }
+thead th      { background:#e1e1e1; color:#fff; }
+  You can zebra-stripe your tables in outdated browsers by adding
+  the class "even" to every other table row.
+tbody tr:nth-child(even) td,
+tbody tr.even td  {
+}
+tfoot       { font-style: normal; }
+tfoot td      { background:url(../images/sprite.png) 0px -260px repeat-x #fff; color:#000; }
+caption     { background: #eee; }
+textarea 
+{
+    background: none;
+    border: none;
+    overflow-y: visible;
+    font-family: tubularfont, Arial, Helvetica !important;
+    white-space:normal;
+    resize:none;
+    outline:none !important;
+    word-wrap: break-word;
+} 
+input{
+	font-size: 1.7em;
+	line-height: 1;
+}
+.loading 
+{ 
+	position: absolute;
+	top: 0%;
+	z-index: 20;
+	width: 100%;
+	height: 88%;
+	background: #eeeeee;
+ }
+ 
+ .loading img{
+	position: absolute;
+	top: 45%;
+	left: 45%;
+}
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+    background:#b5b4b4;
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background:#333333;
+    height:29px;
+}
+#app-container{
+	width:100%;
+	height:100%;
+	margin:0px auto;
+	padding:30px 0 0;
+	float:left;
+	height: 521px;
+	display: block;
+}
+.tubular-logo{
+	position:absolute;
+	bottom:2.5%;
+	right:2.5%;
+	width:12%;
+}
+.carousel_best{
+	width:45%;
+	float:right;
+	position:relative;
+	height:100%;
+}
+.carousel_best .carousel_inner{
+	float: left;
+	width: 100%;
+	height: 100%;
+}
+.visible{
+	display:block !important;
+}
+.invisible{
+	display:none !important;
+}
+.page{
+	margin: 0px auto;
+	display: block;
+	padding: 20px 0 0;
+	width:100%;
+	height:86%;
+	max-width:1180px;
+}
+.title{
+	width: 87%;
+	margin: 0;
+	padding-left: 0%;
+	float: left;
+	z-index: 1000;
+	font-size: 2.6em;
+	font-weight: normal;
+	line-height:1em;
+}
+.block-title {
+	float: left;
+	width: 82%;
+	font-size:1.6em;
+	font-style:italic;
+	margin-bottom: 4%;
+	padding-bottom: 2%;
+	border-bottom: 0.06em solid #A7A7A7;
+	line-height:1em;
+}
+.loading-div, .pop-up{
+	display:none;
+}
+	background:#026BBE !important;
+}*/
+.video-control#video-control{
+	position:absolute;
+	bottom:0%;
+}
+.panel_left{
+	margin-top: 3%;	
+	width:34%;
+	float: left;
+	
+}
+.panel_right{
+	float: left;
+	margin-left: 6%;
+	width: 40%;
+	margin-top:3%;
+	
+}
+#imgCC{
+	position: absolute;
+	bottom: 1%;
+	right: 0%;
+	border: none;
+	width: 5%;
+	float: right;
+	left: 88%;
+}
+#imgFS{
+	position: absolute;
+	bottom: 0%;
+	right: 0%;
+	border: none;
+	width: 5%;
+	float: right;
+	left: 95%;
+}
+.crsl-live{
+	float:left;
+	width:25%;
+}
+#carouselItems .item-1  .crsl-live{
+	float:left;
+	width:33%;	
+}
+#carouselItems .item-1 .crsl-live img{
+	border: 0.3em solid #868686;
+	border-radius: 0.4em 0.4em 0 0;
+}
+#carouselItems.container.list{
+	float: left;
+	width: 100%;
+}
+#carouselItems.container.vertical{
+	height:66%;
+	margin:5% 0;
+}
+.carouselLI{
+	float:left;
+	width:100%;
+}
+#carouselItems .item-0.focused,#carouselItems .item-1.focused,#carouselItems .item-2.focused,#carouselItems .item-3.focused{
+	border:0.3em solid #026bbe !important;;
+}
+#carouselItems .item-1.focused #crslbuy{
+	background:#026bbe;
+	border:0.12em solid #026bbe;
+}
+#carouselItems .item-1 {
+	position: absolute;
+	display: block;
+	margin-top: 32%;
+	float:left;
+	width:100%;
+	left:0;
+}
+#carouselItems .item-2{
+	position:absolute;
+	display: block;
+	margin-top: 77%;
+	float:left;
+	width:100%;
+	left:0;
+}
+.carouselLI img{
+	float: left;
+	width: 97%;
+	margin-right: 5%;
+}
+.control #carouselItems .item-0 img, .control #carouselItems .item-1 img{
+	width: 100%;
+	height: auto;
+	border: 0.3em solid #868686;
+	border-radius: 0.4em;
+}
+.control #carouselItems .item-1 img{	
+	width: 97%;
+	height: auto;
+}
+#crslbuy{
+	display:none;
+}
+#carouselItems .item-0, #carouselItems .item-1, #carouselItems .item-2{
+	background-color:transparent !important;
+}
+#carouselItems .item-0 #imagePanel img, #carouselItems .item-2 #imagePanel img{
+	border: 0.2em solid #999;
+	border-radius:0.3em;
+}
+#carouselItems .item-1 #crslbuy{
+	text-align:center;
+	color:#fff;
+	width:100%;
+	background:#868686;
+	font-size:1.5em;
+	line-height:1.2em;
+	display:block;
+	border-radius: 0.2em;
+	border: 0.12em solid #868686;
+}
+.carouselLI #playingNow{
+	float:right;
+	width:70%;
+}
+.carouselLI #prodprice{
+	float:right;
+	width:70%;
+}
+.carouselLI #prodname{
+	float:right;
+	width:70%;
+}
+#carouselItems .item-1 #playingNow{
+	width:63%;
+}
+#carouselItems .item-1 #prodprice{
+	width:63%;
+	display: block;
+	color: #777;
+	margin-bottom: 2%;
+	font-size:1.6em;
+}
+#carouselItems .item-1 #prodname{
+	width:63%;
+	font-size:1.2em;
+}
+.divDownArrow,.divUpArrow
+{
+	float: right;
+	width: 30%;
+	height: 4%;
+}
+.loadingMsg
+{
+	position: absolute;
+	top: 50%;
+	left: 35%;
+	font-size: 1.8em;
+	font-weight: normal;
+}
+.loading .dotloader
+{
+	left:46%;
+	top:55%;
+}
+#tubularlive_video.video-active
+{
+	border:.3em solid #026bbe;
+}
+#tubularlive_video.video-fs
+{
+	width: 100%;
+	height: 100% !important;
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	border: 0;
+	border-radius: 0;
+	z-index:100;
+}
+#pnlHeader{
+	font-size:2em;
+}
+#home-tilelistTop .control.tile.visible.focused .label,#home-tilelistMiddle .control.tile.visible.focused .label, #home-tilelistBottom .control.tile.visible.focused .label {
+	background: #026bbe;
+}
+/************************************************** list.css **************************************************/
+.list{
+	width: 84%;
+	margin-top: 3%;
+	padding: 0;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	height: 30%;
+}
+/************************************************** tile.css **************************************************/
+.list{
+	width: 84%;
+	margin-top: 3%;
+	padding: 0;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	height: 30%;
+}
+.tile{
+	display: inline;
+	float: left;	
+	width:15%;
+}
+.tile img{
+	width:100%;
+	float:left;
+}
+div.control.tile {
+    border: 0.3em solid #868686;
+	border-radius: 0.3em;
+}
+.tile div{
+	text-align: center;
+	bottom: 0;
+	padding: 1% 0%;
+	width: 100%;
+	background: #333;
+	opacity: 0.7;
+	color: white;
+	font-size:0.9em;
+	float:left;
+	font-weight:normal;
+}
+/************************************************** video.css **************************************************/
+.video{
+	background:#000 !important;
+	margin-left:auto;
+	margin-right:auto;	
+	position:relative;	
+}
+.video video{
+	width:100%;
+	height:100%;
+}
+.control #caption{
+	position: absolute;
+	bottom: 0%;
+	right: 0%;
+	border: none;
+	width: 8%;
+	float: right;
+	left: 82%;
+}
+	
+.control #expand{
+	position: absolute;
+	bottom: 0%;
+	right: 0%;
+	border: none;
+	width: 8%;
+	float: right;
+	left: 92%;
+}
+.control #overlay
+	{
+	float: left;
+	position: absolute;
+	bottom: 13.53%;
+	left: 7.47%;
+	font-size: 1.70em;
+	background-color: #E3E3E3;
+	text-align: center;
+	padding: 0.1% 0%;
+}
+	
+#home-video-fullscreen #overlay	{
+	float: left;
+	position: absolute;
+	bottom: 13.7%;
+	left: 7.61%;
+	font-size: 2.80em;
+	background-color: #E3E3E3;
+	padding: 0.3% 0.4%;
+	text-align: center;
+}
+.video-minimise 
+{
+    display: block;
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    float: left;
+    opacity: 0.7;*/
+}
+.video-minimise-background
+{
+    background: #333;
+    opacity: 0.7;
+    padding-top:0%; 
+    height:7.3%;   
+}
+.videoactive , .videoinactive 
+{
+    padding: 0 0.5%;
+    width:4%; 
+    float:right;
+    
+}
+.expand_active, .cc_active
+{
+	width:5.5%;
+	float:right;
+}
+.expand_active , .cc_active
+{
+    padding: 0 2%;    
+}
+.videoactive 
+{
+    display:block;
+}
+.videoinactive
+{
+    display:none;
+}
+.carouselVideo{
+	width:50%;
+	position:relative;
+}
+.carouselVideo video {
+    width:100%;
+    background-color:#000;
+    display:block;
+    float:left;
+    border:0.4em solid #868686;
+}
+.carouselVideo.videozoom .video-left-inner video 
+{
+    border:0.4em solid #026BBE;
+}
+.carouselVideo h3 {
+	float:left;
+}
+.carouselVideo p {
+	margin:0;
+	padding:0;
+	float:left;
+}
+.video-left-inner 
+{
+    margin:20% 0 0 0 ;
+    width:84.1%;
+    float:left;
+}
+.fullscreen , .productVideo.test
+{
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+.fullscreen .productVideoControl , .fullscreen .videozoom 
+{
+    background:none;
+}
+.fullscreen , .carouselVideo.fullscreen video 
+{
+    width:100%;
+    height:99.5%;
+    position:absolute;
+    top:0;
+    left:0;
+    border:none !important;
+    outline:none !important;
+    background:#000;
+}
+.disclaimer{
+    color: #777;
+    font-size: 1.0em;
+    font-weight:normal;
+    float: left;
+	margin-top: 12%;
+	line-height:1em;
+}
+.overrelay
+{
+	position: absolute;
+	left: 10%;
+	bottom: 12%;
+	display: block;
+	background: #e3e3e3;
+	width: 22%;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 0.7em;
+	line-height: normal;
+}
+.video-fs .overrelay
+{
+	
+	width: 16%;
+	font-size: 1.7em;
+}
