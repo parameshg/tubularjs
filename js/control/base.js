@@ -30,7 +30,7 @@ System.control.Base = function (args) {
 
     var self = System.type.extend(System.control.Component, args);
 
-    //Property: type
+    // property: type
     (function () {
         var _value = "control";
 
@@ -39,7 +39,7 @@ System.control.Base = function (args) {
         };
     })();
 
-    //Property: events
+    // property: events
     (function () {
         var _value = {};
 
@@ -76,7 +76,7 @@ System.control.Base = function (args) {
 
     })();
 
-    //Property: navigation
+    // property: navigation
     (function () {
         var _value = {};
 

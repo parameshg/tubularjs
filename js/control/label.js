@@ -23,13 +23,16 @@
 */
 
 var System = System || {}; // #IGNORE
+
 System.control = System.control || {};
+
 System.control.Label = function (args) {
-    var self =System.type.extend(System.control.Component, args);
+
+    var self = System.type.extend(System.control.Component, args);
 
     self.addClass("label");
 
-    //Constructor
+    // .ctor
     (function (args) {
 
         if (typeof args !== "undefined" && args !== null) {

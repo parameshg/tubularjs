@@ -32,7 +32,7 @@ System.control.html.Div = function (args) {
 
     var self =System.type.extend(System.control.html.Base, { element: "div" });
 
-    //Property: text
+    // property: text
     (function () {
 
         var setText = function (value) {
@@ -54,7 +54,7 @@ System.control.html.Div = function (args) {
 
     })();
 
-    //Property: items
+    // property: items
     (function () {
 
         self.addItem = function (item) {

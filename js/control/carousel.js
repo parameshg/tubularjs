@@ -32,33 +32,12 @@ System.control.Carousel = function (args) {
 
     var imageContainer = System.type.extend(System.control.Tile, args);
 
-    //property: webPID
-    (function () {
-        var _value = "";
-
-        var setWebPID = function (value) {
-            _value = value;
-        }
-        var getWebPID = function () {
-            return _value;
-        }
-
-        self.webPid = function (value) {
-            if (typeof value !== "undefined" && value !== null) {
-                setWebPID(value);
-            }
-            else {
-                return getWebPID();
-            }
-        }
-    })();
-
-    //property: url
+    // property: url
     self.url = function (value) {
         return value;
     };
 
-    //Contructor
+    // .ctor
     (function (args) {
 
         if (typeof args !== "undefined" && args !== null) {
@@ -70,8 +49,6 @@ System.control.Carousel = function (args) {
             self.addItem(imageContainer);
 
             if (typeof args.text !== "undefined" && args.text !== null) {
-                //self.text(args.text);
-                //self.addItem(new System.control.html.Div({id:"prodprice",class :"item-desc", text :args.text  }));
             }
             if (typeof args.title !== "undefined" && args.title !== null) {
                 self.addItem(new System.control.Label({ id: "prodtitle", class: "item-desc", text: "$" + args.title }));
@@ -86,5 +63,5 @@ System.control.Carousel = function (args) {
 
 })(args);
 
-return self;
+    return self;
 };

@@ -30,7 +30,7 @@ System.control.Component = function (args) {
 
     var self =System.type.extend(System.control.html.Div, args);
 
-    //Property: type
+    // property: type
     (function () {
         var _value = "component";
 
@@ -39,7 +39,7 @@ System.control.Component = function (args) {
         };
     })();
 
-    //Property: visible
+    // property: visible
     (function () {
 
         var _value = true;
@@ -69,7 +69,7 @@ System.control.Component = function (args) {
 
     })();
 
-    //Constructor
+    // .ctor
     (function (args) {
 
         self.visible(true);

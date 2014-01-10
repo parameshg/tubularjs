@@ -22,7 +22,8 @@
 * THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-.list{
+.list
+{
 	width: 84%;
 	margin-top: 3%;
 	padding: 0;
@@ -32,23 +33,27 @@
 	height: 30%;
 }
 
-.tile{
+.tile
+{
 	display: inline;
 	float: left;	
 	width:15%;
 }
 
-.tile img{
+.tile img
+{
 	width:100%;
 	float:left;
 }
 
-div.control.tile {
+div.control.tile
+{
     border: 0.3em solid #868686;
 	border-radius: 0.3em;
 }
 
-.tile div{
+.tile div
+{
 	text-align: center;
 	bottom: 0;
 	padding: 1% 0%;

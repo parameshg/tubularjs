@@ -23,18 +23,26 @@
 */
 
 var System = System || {}; // #IGNORE
+
 System.control = System.control || {};
+
 System.control.ImageTile = function (args) {
+
     var self = System.type.extend(System.control.Base, args);
+
     var _image = new System.control.html.Image();
+
     var _panel = new System.control.Panel();
+
     var _text = new System.control.Label();
+
     var _text1 = new System.control.Label();
+
     var _text2 = new System.control.Label();
+
     var tagText;
 
-
-    //property: source
+    // property: source
     (function () {
 
         self.source = function (value) {
@@ -43,8 +51,7 @@ System.control.ImageTile = function (args) {
 
     })();
 
-
-    //property: text
+    // property: text
     (function () {
 
         var setText = function (value) {
@@ -68,26 +75,7 @@ System.control.ImageTile = function (args) {
 
     })();
 
-    //property: webPID
-    (function () {
-        var _value;
-
-        var setWebPID = function (value) {
-            _value = value;
-        };
-        var getWebPID = function () {
-            return _value;
-        };
-        self.webPID = function (value) {
-            if (typeof value !== "undefined" && value !== null) {
-                setWebPID(value);
-            }
-            else {
-                return getWebPID();
-            }
-        };
-    })();
-    //property: tag    
+    //property: tag
     (function () {
         var _value;
 
@@ -107,7 +95,7 @@ System.control.ImageTile = function (args) {
         };
     })();
 
-    //Contructor
+    // .ctor
     (function (args) {
         self.addClass("tile");
         if (typeof args !== "undefined" && args !== null) {

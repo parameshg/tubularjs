@@ -23,13 +23,16 @@
 */
 
 var System = System || {}; // #IGNORE
+
 System.control = System.control || {};
+
 System.control.Grid = function (args) {
 
     var self = System.type.extend(System.control.Container, args);
 
     self.addClass("grid");
-    //Property: type
+
+    // property: type
     (function () {
         var _value = "grid";
 
@@ -38,7 +41,7 @@ System.control.Grid = function (args) {
         };
     })();
 
-    //Property: items
+    // property: items
     (function () {
 
         self.addItem = function (value) {
@@ -65,7 +68,7 @@ System.control.Grid = function (args) {
 
     })();
 
-    //Property: colums
+    // property: colums
     (function () {
         var _value = 4;
 
@@ -84,7 +87,7 @@ System.control.Grid = function (args) {
         };
     })();
 
-    //Property: currentIndex
+    // property: currentIndex
     (function () {
         var _value = 0;
 
@@ -103,7 +106,7 @@ System.control.Grid = function (args) {
         };
     })();
 
-    //Navigation
+    // navigation
     (function () {
         var _currentIndex = 0;
 
@@ -346,8 +349,7 @@ System.control.Grid = function (args) {
         };
     })();
 
-
-    //Property: custom navigation
+    // property: custom navigation
     (function () {
         var _value = {};
 
@@ -378,7 +380,7 @@ System.control.Grid = function (args) {
 
     })();
 
-    //Constructor
+    // .ctor
     (function (args) {
         if (typeof args !== "undefined" && args !== null) {
 
@@ -395,7 +397,7 @@ System.control.Grid = function (args) {
         }
     })(args);
 
-    //Method: focus
+    // method: focus
     self.focus = function () {
         var result = false;
 
@@ -407,7 +409,7 @@ System.control.Grid = function (args) {
         return result;
     };
 
-    //Method: unfocus
+    // method: unfocus
     self.unfocus = function () {
         var result = false;
 

@@ -23,13 +23,16 @@
 */
 
 var System = System || {}; // #IGNORE
+
 System.control = System.control || {};
+
 System.control.Dropdownitem = function (args) {
 
-    var self =System.type.extend(System.control.Base, args);   
+    var self = System.type.extend(System.control.Base, args);
+
     var _text = new System.control.Label();
 
-    //property: label
+    // property: label
     (function () {
         var _value = "";
 
@@ -51,7 +54,7 @@ System.control.Dropdownitem = function (args) {
         }
     })();
 
-    //property: value
+    // property: value
     (function () {
         var _value = "";
 
@@ -72,7 +75,7 @@ System.control.Dropdownitem = function (args) {
         }
     })();
 
-    //property: type
+    // property: type
     (function () {
         var _value = "";
 
@@ -93,70 +96,7 @@ System.control.Dropdownitem = function (args) {
         }
     })();
 
-    //property: so
-    (function () {
-        var _value = "";
-
-        var setSO = function (value) {
-            _value = value;
-        }
-        var getSO = function () {
-            return _value;
-        }
-
-        self.so = function (value) {
-            if (typeof value !== "undefined" && value !== null) {
-                setSO(value);
-            }
-            else {
-                return getSO();
-            }
-        }
-    })();
-
-    //property: webID
-    (function () {
-        var _value = "";
-
-        var setWebID = function (value) {
-            _value = value;
-        }
-        var getWebID = function () {
-            return _value;
-        }
-
-        self.webID = function (value) {
-            if (typeof value !== "undefined" && value !== null) {
-                setWebID(value);
-            }
-            else {
-                return getWebID();
-            }
-        }
-    })();
-
-    //property: sku
-    (function () {
-        var _value = "";
-
-        var setSKU = function (value) {
-            _value = value;
-        }
-        var getSKU = function () {
-            return _value;
-        }
-
-        self.sku = function (value) {
-            if (typeof value !== "undefined" && value !== null) {
-                setSKU(value);
-            }
-            else {
-                return getSKU();
-            }
-        }
-    })();
-
-    //Contructor
+    // .ctor
     (function (args) {
         self.addClass("product");
         if (typeof args !== "undefined" && args !== null) {

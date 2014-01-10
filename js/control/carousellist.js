@@ -30,8 +30,9 @@ System.control.Carousellist = function (args) {
 
     var self = System.type.extend(System.control.Base, args);
 
-    //Contructor
     self.class("carousel_inner");
+    
+    // .ctor
     (function (args) {
 
         if (typeof args !== "undefined" && args !== null) {

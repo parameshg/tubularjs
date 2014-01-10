@@ -29,9 +29,10 @@ System.control = System.control || {};
 System.control.html = System.control.html || {};
 
 System.control.html.Image = function (args) {
-    
-    var self =System.type.extend(System.control.html.Base, { element: "img" });
-    //Property: type
+
+    var self = System.type.extend(System.control.html.Base, { element: "img" });
+
+    // property: type
     (function () {
         var _value = "component";
 
@@ -40,7 +41,7 @@ System.control.html.Image = function (args) {
         };
     })();
 
-    //property: source
+    // property: source
     (function () {
 
         var setSource = function (value) {
@@ -62,7 +63,7 @@ System.control.html.Image = function (args) {
 
     })();
 
-    //Constructor
+    // .ctor
     (function (args) {
         if (typeof args !== "undefined" && args !== null) {
 
@@ -80,7 +81,7 @@ System.control.html.Image = function (args) {
         }
     })(args);
 
-    //html
+    // property: html
     self.html = function () {
         return self.element();
     };

@@ -60,7 +60,7 @@ var System = (function (base) {
 
     })();
 
-    //property: currentPage
+    // property: currentPage
     (function () {
         var _currentPage = "";
 

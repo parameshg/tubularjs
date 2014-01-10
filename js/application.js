@@ -27,7 +27,7 @@ var System = System || {};
 System.Application = function () {
     var self = {};
 
-    //Property: currentPage
+    // property: currentPage
     (function () {
         var _value = {};
 
@@ -49,7 +49,7 @@ System.Application = function () {
 
     })();
 
-    //Property: pages
+    // property: pages
     (function () {
 
         var _value = {};
@@ -81,7 +81,7 @@ System.Application = function () {
 
     })();
 
-    //property: session
+    // property: session
     (function () {
         var _value = "";
 

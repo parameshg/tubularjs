@@ -29,7 +29,7 @@ System.event = System.event || {};
 System.event.handler = (function () {
     var self = {};
 
-    //Property: handlers
+    // property: handlers
     (function () {
 
         var executeHandler = function (event) {

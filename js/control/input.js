@@ -23,13 +23,16 @@
 */
 
 var System = System || {}; // #IGNORE
+
 System.control = System.control || {};
+
 System.control.TextBox = function (args) {
-    var self =System.type.extend(System.control.Base, args);
+
+    var self = System.type.extend(System.control.Base, args);
 
     var _input = new System.control.html.Input();
 
-    //Property: value
+    // property: value
     (function () {
 
         var setValue = function (value) {
@@ -55,16 +58,7 @@ System.control.TextBox = function (args) {
         return _input.value.length;
     };
 
-    //    //property: value
-    //    (function () {
-
-    //        self.maxlength = function (value) {
-    //            _input.maxlength(value);
-    //        };
-
-    //    })();
-
-    //Constructor
+    // .ctor
     (function (args) {
 
         if (typeof args !== "undefined" && args !== null) {

@@ -27,9 +27,10 @@ var System = System || {}; // #IGNORE
 System.page = System.page || {};
 
 System.page.Base = function (args) {
-    var self =System.type.extend(System.control.html.Div, args);
 
-    //Property: focusedControl
+    var self = System.type.extend(System.control.html.Div, args);
+
+    // property: focusedControl
     (function () {
         var _value;
 
@@ -51,7 +52,7 @@ System.page.Base = function (args) {
 
     })();
 
-    //Property: controls
+    // property: controls
     (function () {
 
         var _value = {};
@@ -80,7 +81,7 @@ System.page.Base = function (args) {
             _value[value.id()] = value;
             self.addItem(value);
 
-            //Solely for navigation
+            // solely for navigation
             self.addNavigationPoint(value);
         };
 
@@ -88,7 +89,7 @@ System.page.Base = function (args) {
             self.removeItem(_value[value.id()]);
             delete _value[value.id()];
 
-            //Solely for navigation
+            // solely for navigation
             self.removeNavigationPoint(value);
         };
 
@@ -97,7 +98,7 @@ System.page.Base = function (args) {
                 self.removeControl(_value[key]);
             }
 
-            //Solely for navigation
+            // solely for navigation
             self.clearNavigationMap();
         };
 
@@ -125,7 +126,7 @@ System.page.Base = function (args) {
 
     })();
 
-    //property: navigationMap
+    // property: navigationMap
     (function () {
 
         var _value = {};
@@ -202,14 +203,14 @@ System.page.Base = function (args) {
 
     })();
 
-    //Constructor
+    // .ctor
     (function (args) {
 
         self.addClass("page");
 
     })(args);
 
-    //Method: focus
+    // method: focus
     self.focus = function (control) {
         var focusedControl = self.focusedControl();
 

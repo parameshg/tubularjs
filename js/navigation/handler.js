@@ -29,7 +29,7 @@ System.navigation = System.navigation || {};
 System.navigation.handler = (function () {
     var self = {};
 
-    //Property: navigation events
+    // property: navigation events
     (function () {
         _value = ["left", "right", "up", "down"];
 
@@ -44,7 +44,7 @@ System.navigation.handler = (function () {
         };
     })();
 
-    //Property: handlers
+    // property: handlers
     (function () {
 
         var overlapsVertically = function (a, b) {
@@ -330,13 +330,6 @@ System.navigation.handler = (function () {
                 var _itemIndex = 0;
                 for (var key in controls) {
                     if (controls[key].id() == _controlID) {
-//                        if (controls[key].type() == "list" && (event === "right" || event === "down") && _controlID !== "carouselItems" && _controlID !== "helpMain" && _controlID !== "channelMain" && _controlID !== "carouselChoice") {
-//							controls[key].setCurrentIndex(_itemIndex);
-//                        }
-//			             else if (controls[key].type() == "list" && event === "left" && _controlID !== "review-list" && _controlID !== "helpMain" && _controlID !== "channelMain" && _controlID !== "carouselChoice") {
-//                            _itemIndex = (controls[key].itemCount() === 1) ? 0 : controls[key].itemCount() - 1;
-//                            controls[key].setCurrentIndex(_itemIndex);
-                        //                        }
                         if (controls[key].type() == "list" && (event === "right" || event === "down") && controls[key].updateRightIndex() === true){
                                 controls[key].setCurrentIndex(_itemIndex);
                         }

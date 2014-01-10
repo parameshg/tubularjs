@@ -23,6 +23,7 @@
 */
 
 var System = System || {}; // #IGNORE
+
 System.page = System.page || {};
 
 System.page.Home = function () {

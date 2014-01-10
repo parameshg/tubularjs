@@ -23,9 +23,12 @@
 */
 
 var System = System || {}; // #IGNORE
+
 System.control = System.control || {};
+
 System.control.Logo = function (args) {
-    var self =System.type.extend(System.control.html.Image, args);
+
+    var self = System.type.extend(System.control.html.Image, args);
 
     //    //Property: type
         (function () {
@@ -36,7 +39,7 @@ System.control.Logo = function (args) {
             };
         })();
 
-    //Contructor
+    // .ctor
     (function (args) {
 
         self.source( "images/logo-new.png" );

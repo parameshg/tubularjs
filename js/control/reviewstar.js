@@ -28,11 +28,13 @@ System.control = System.control || {};
 
 System.control.ReviewStar = function (args) {
 
-    var self =System.type.extend(System.control.Container, args); 
+    var self = System.type.extend(System.control.Container, args);
+
     var _image = new System.control.html.Image();
+
     var _text = new System.control.Label();
 
-    //property: rating
+    // property: rating
     (function () {
 
         self.rating = function (value) {            
@@ -41,7 +43,7 @@ System.control.ReviewStar = function (args) {
 
     })();
 
-    //property: text
+    // property: text
     (function () {
 
         self.text = function (value) {
@@ -93,7 +95,7 @@ System.control.ReviewStar = function (args) {
         return _url;
     };
 
-    //Contructor
+    // .ctor
     (function (args) {
 
         if (typeof args !== "undefined" && args !== null) {

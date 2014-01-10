@@ -34,14 +34,14 @@ System.control.html.Base = function (args) {
 
     var _element;
 
-    //Property: element
+    // property: element
     (function () {
         self.element = function () {
             return _element;
         };
     })();
 
-    //Property: id
+    // property: id
     (function () {
 
         var setId = function (value) {
@@ -62,7 +62,7 @@ System.control.html.Base = function (args) {
 
     })();
 
-    //Property: visible
+    // property: visible
     (function () {
         var _value = true;
 

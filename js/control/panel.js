@@ -32,26 +32,7 @@ System.control.Panel = function (args) {
 
     self.addClass("panel");
 
-//    //Property: type
-//    (function () {
-//        var _value = "panel";
-
-//        self.type = function () {
-//            return _value;
-//        };
-//    })();
-
-//    self.current = function () {
-//        var result = null;
-
-//        if (self.itemCount() > 0) {
-//            result = self.item(_currentIndex);
-//        }
-
-//        return result;
-//    };
-
-    //Method: focus
+    // method: focus
     self.focus = function () {
         var result = false;
 
@@ -63,7 +44,7 @@ System.control.Panel = function (args) {
         return result;
     };
 
-    //Method: unfocus
+    // method: unfocus
     self.unfocus = function () {
         var result = false;
 
@@ -75,7 +56,7 @@ System.control.Panel = function (args) {
         return result;
     };
 
-    //Constructor
+    // .ctor
     (function (args) {
 
         if (typeof args !== "undefined" && args !== null) {

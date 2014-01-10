@@ -54,18 +54,6 @@ System.control.Video = function (args) {
         navigation: { left: "menu", up: "" }
     });
 
-    //    _imgCC = new System.control.ImageTile({
-    //        id: "imgCC",
-    //        class: "videocc",
-    //        source: "images/cc.png",
-    //        events: {
-    //            click: function (sender) {
-    //                //loginkeyDown(sender.id().replace("btn", ""));
-    //                console.log("buy button Click Event!");
-    //            }
-    //        }
-    //    });
-
     _label = new System.control.Label({
         id: "orNo",
         class: "overrelay"
@@ -113,7 +101,7 @@ System.control.Video = function (args) {
 
     })();
 
-    //Constructor
+    // .ctor
     (function (args) {
         if (typeof args !== "undefined" && args !== null) {
             if (typeof args.source !== "undefined" && args.source !== null) {
@@ -133,7 +121,6 @@ System.control.Video = function (args) {
             }
         }
         self.addItem(_video);
-        // self.addItem(_imgCC);
         self.addItem(_imgFullScreen);
         self.addItem(_label);
         self.addItem(_lblDisc);

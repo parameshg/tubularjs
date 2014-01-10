@@ -32,7 +32,7 @@ System.control.Button = function (args) {
         
     var _text = new System.control.Label();
 
-   //property: text
+    // property: text
     (function () {
 
         var setText = function (value) {
@@ -56,9 +56,7 @@ System.control.Button = function (args) {
 
     })();
 
-
-
-    //property: Tag
+    // property: Tag
     (function () {
         var _value = "";
 
@@ -79,7 +77,7 @@ System.control.Button = function (args) {
         }
     })();
 
-    //Contructor
+    // .ctor
     (function (args) {
         self.addClass("button");
         if (typeof args !== "undefined" && args !== null) {

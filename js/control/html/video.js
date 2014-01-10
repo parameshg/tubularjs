@@ -32,7 +32,7 @@ System.control.html.Video = function (args) {
 
     var self = System.type.extend(System.control.html.Base, { element: "video" });
 
-    //Property: source
+    // property: source
     (function () {
 
         self.source = function (value) {
@@ -42,7 +42,7 @@ System.control.html.Video = function (args) {
 
     })();
 
-    //Property: type
+    // property: type
     (function () {
 
         self.type = function (value) {
@@ -52,7 +52,7 @@ System.control.html.Video = function (args) {
 
     })();
 
-    //Contructor
+    // .ctor
     (function (args) {
         var source = document.createElement("source");
         // source.nodeType = "video/mp4";
@@ -75,22 +75,22 @@ System.control.html.Video = function (args) {
         self.element().autoplay = true;
     })(args);
 
-    //Method: html
+    // method: html
     self.html = function () {
         return self.element();
     };
 
-    //Method: load
+    // method: load
     self.load = function () {
         self.element().load();
     };
 
-    //Method: play
+    // method: play
     self.play = function () {
         self.element().play();
     };
 
-    //Method: pause
+    // method: pause
     self.pause = function () {
         self.element().pause();
     };

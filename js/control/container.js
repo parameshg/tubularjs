@@ -28,9 +28,9 @@ System.control = System.control || {};
 
 System.control.Container = function (args) {
 
-    var self =System.type.extend(System.control.html.Div, args);
+    var self = System.type.extend(System.control.html.Div, args);
 
-    //Property: type
+    // property: type
     (function () {
         var _value = "container";
 
@@ -39,7 +39,7 @@ System.control.Container = function (args) {
         };
     })();
 
-    //Property: items
+    // property: items
     (function () {
 
         var _value = [];
@@ -76,7 +76,7 @@ System.control.Container = function (args) {
 
     })();
 
-    //Constructor
+    // .ctor
     (function (args) {
 
         self.addClass("container");

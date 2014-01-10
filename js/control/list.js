@@ -23,14 +23,16 @@
 */
 
 var System = System || {}; // #IGNORE
+
 System.control = System.control || {};
+
 System.control.List = function (args) {
 
     var self = System.type.extend(System.control.Container, args);
 
     self.addClass("list");
 
-    //Property: type
+    // property: type
     (function () {
         var _value = "list";
 
@@ -39,7 +41,7 @@ System.control.List = function (args) {
         };
     })();
 
-    //Property: items
+    // property: items
     (function () {
 
         var _value = [];
@@ -82,7 +84,7 @@ System.control.List = function (args) {
 
     })();
 
-    //Property: visibleItemCount
+    // property: visibleItemCount
     (function () {
         var _value = 3;
 
@@ -101,7 +103,7 @@ System.control.List = function (args) {
         };
     })();
 
-    //Property: orientation
+    // property: orientation
     (function () {
         var _value = "vertical";
 
@@ -121,7 +123,7 @@ System.control.List = function (args) {
         };
     })();
 
-    //Property: circular
+    // property: circular
     (function () {
         var _value = false;
 
@@ -145,7 +147,7 @@ System.control.List = function (args) {
         };
     })();
 
-    //Property: currentIndex
+    // property: currentIndex
     (function () {
         var _value = 0;
 
@@ -164,7 +166,7 @@ System.control.List = function (args) {
         };
     })();
 
-    //Property: orientation
+    // property: orientation
     (function () {
         var _value = "vertical";
 
@@ -184,7 +186,7 @@ System.control.List = function (args) {
         };
     })();
 
-    //Property: updateLeftIndex
+    // property: updateLeftIndex
     (function () {
         var _value = true;
 
@@ -203,7 +205,7 @@ System.control.List = function (args) {
         };
     })();
 
-    //Property: updateRightIndex
+    // property: updateRightIndex
     (function () {
         var _value = true;
 
@@ -222,7 +224,7 @@ System.control.List = function (args) {
         };
     })();
 
-    //Navigation
+    // navigation
     (function () {
         var _currentIndex = 0;
 
@@ -480,7 +482,7 @@ System.control.List = function (args) {
     })();
 
 
-    //Property: custom navigation
+    // property: custom navigation
     (function () {
         var _value = {};
 
@@ -511,7 +513,7 @@ System.control.List = function (args) {
 
     })();
 
-    //Property: custom events
+    // property: custom events
     (function () {
         var _value = {};
 
@@ -542,7 +544,7 @@ System.control.List = function (args) {
 
     })();
 
-    //Constructor
+    // .ctor
     (function (args) {
         if (typeof args !== "undefined" && args !== null) {
             if (typeof args.visibleItemCount !== "undefined" && args.visibleItemCount !== null) {
@@ -570,7 +572,7 @@ System.control.List = function (args) {
         }
     })(args);
 
-    //Method: focus
+    // method: focus
     self.focus = function () {
         var result = false;
 
@@ -582,7 +584,7 @@ System.control.List = function (args) {
         return result;
     };
 
-    //Method: unfocus
+    // method: unfocus
     self.unfocus = function () {
         var result = false;
 

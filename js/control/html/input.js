@@ -32,7 +32,7 @@ System.control.html.Input = function (args) {
 
     var self =System.type.extend(System.control.html.Base, { element: "input" });    
 
-    //Property: value
+    // property: value
     (function () {
 
         var setValue = function (value) {
@@ -55,7 +55,7 @@ System.control.html.Input = function (args) {
     })();
 
 
-    //Property: type
+    // property: type
     (function () {
 
         var setType = function (value) {
@@ -77,8 +77,7 @@ System.control.html.Input = function (args) {
 
     })();
 
-
-    //Property: maxlength
+    // property: maxlength
     (function () {
 
         var setMaxLength = function (value) {
@@ -100,7 +99,7 @@ System.control.html.Input = function (args) {
 
     })();
 
-    //Property: readonly
+    // property: readonly
     (function () {
 
         var setReadOnly = function (value) {            
@@ -122,7 +121,7 @@ System.control.html.Input = function (args) {
 
     })();
 
-    //Property: autocomplete
+    // property: autocomplete
     (function () {
 
         var setAutoComplete = function (value) {
@@ -144,20 +143,7 @@ System.control.html.Input = function (args) {
 
     })();
 
-    //    (function () {
-    //        self.maxLengthPaste = function(field, maxChars) {
-    //            event.returnValue = false;
-    //            var clipText = window.clipboardData.getData("Text");
-
-    //            if (cliptext.length == maxChars) {
-    //                return false;
-    //            }
-
-    //            event.returnValue = true;
-    //        };
-    //    })();
-
-    //Contructor
+    // .ctor
     (function (args) {
 
         if (typeof args !== "undefined" && args !== null) {
@@ -192,7 +178,7 @@ System.control.html.Input = function (args) {
         }
     })(args);
 
-    //Method: html
+    // method: html
     self.html = function () {
         return self.element();
     };

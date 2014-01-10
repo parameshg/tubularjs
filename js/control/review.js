@@ -31,12 +31,16 @@ System.control.Reviewtile = function (args) {
     var self =System.type.extend(System.control.Tile, args);
 
     var _title = new System.control.Label({ class: "rvwTitle" });
+
     var _address = new System.control.Label({ class: "rvwAddress" });
+
     var _image = new System.control.ReviewStar({ class: "rvwRating" });
-    var _comment = new System.control.Label({id:"rvwComment", class: "rvwComment" });
+
+    var _comment = new System.control.Label({ id: "rvwComment", class: "rvwComment" });
+
     var _state = new System.control.Label({ class: "rvwAddress" });
 
-    //property: reviewId
+    // property: reviewId
     (function () {
         var _value = "";
 
@@ -57,7 +61,7 @@ System.control.Reviewtile = function (args) {
         }
     })();
 
-    //property: title
+    // property: title
     (function () {
 
         self.title = function (value) {
@@ -66,7 +70,7 @@ System.control.Reviewtile = function (args) {
 
     })();
 
-    //property: address
+    // property: address
     (function () {
 
         self.address = function (value) {
@@ -75,7 +79,7 @@ System.control.Reviewtile = function (args) {
 
     })();
 
-    //property: rating
+    // property: rating
     (function () {
 
         self.rating = function (value) {
@@ -84,7 +88,7 @@ System.control.Reviewtile = function (args) {
 
     })();
 
-    //property: comment
+    // property: comment
     (function () {
 
         self.comment = function (value) {
@@ -102,7 +106,7 @@ System.control.Reviewtile = function (args) {
 
     })();
 
-    //Contructor
+    // .ctor
     (function (args) {
 
         self.addClass("tile");
