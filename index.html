@@ -29,8 +29,7 @@
 <script type="text/javascript">
     var load = function () {
         System.application = new System.Application();
-        //TODO: Generate unique session ID
-        System.application.session("todo_generate_unique_id");
+        System.application.session("generate_unique_id");
         System.utility.page.load(System.utility.constant.page.home());
     };
     window.onkeydown = function (e) {
