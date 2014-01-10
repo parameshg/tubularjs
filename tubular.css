@@ -45,144 +45,286 @@
 /************************************************** common.css **************************************************/
 @font-face 
 {
-    font-family:'tubularfont';
-    font-weight:normal;
-    font-style:normal;
+    font-family: 'tubularfont';
+    font-weight: normal;
+    font-style: normal;
 }
-@media screen and (min-width: 250px) {
-    body{font-size: 25%;}
+@media screen and (min-width: 250px)
+{
+    body
+    {
+        font-size: 25%;
+    }
 }
-@media screen and (min-width: 400px) {
-    body{font-size: 50%;}
+@media screen and (min-width: 400px)
+{
+    body
+    {
+        font-size: 50%;
+    }
 }
-@media screen and (min-width: 650px) {
-    body{font-size: 60%;}
+@media screen and (min-width: 650px)
+{
+    body
+    {
+        font-size: 60%;
+    }
 }
-@media screen and (min-width: 800px) {
-    body{font-size: 70%;}
+@media screen and (min-width: 800px)
+{
+    body
+    {
+        font-size: 70%;
+    }
 }
-@media screen and (min-width: 950px) {
-    body{font-size: 80%;}
+@media screen and (min-width: 950px)
+{
+    body
+    {
+        font-size: 80%;
+    }
 }
-@media screen and (min-width: 1025px) {
-    body{font-size: 85%;}
+@media screen and (min-width: 1025px)
+{
+    body
+    {
+        font-size: 85%;
+    }
 }
-@media screen and (min-width: 1100px) {
-    body{font-size: 90%;}
+@media screen and (min-width: 1100px)
+{
+    body
+    {
+        font-size: 90%;
+    }
 }
-@media screen and (min-width: 1280px) {
-    body{font-size: 100%;}
+@media screen and (min-width: 1280px)
+{
+    body
+    {
+        font-size: 100%;
+    }
 }
-body {
-	background-position:center center;
-   	background-color:#eeeeee;
+body
+{
+	background-position: center center;
+   	background-color: #eeeeee;
     font: 75%/1.5;
-	line-height:22px;
+	line-height: 22px;
     margin: 0;
     padding: 0;
-	font-family:tubularfont, Arial , Helvetica ;
-	font-weight:bold;
-	overflow:hidden;
-	}
-a:hover , a:active , a:focus , a#TodaySpecialImage:hover , a#TodaySpecialImage:hover h3
+	font-family: tubularfont, Arial , Helvetica;
+	font-weight: bold;
+	overflow: hidden;
+}
+a:hover, a:active, a:focus
 {
     text-decoration:none;  
 }
-html {
+html
+{
 	margin:0;
 	padding:0;
 	border:0;
-	height:100%;}
-body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, code,
-del, dfn, em, img, q, dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, dialog, figure, footer, header,
-hgroup, nav, section {
+	height:100%;
+}
+body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, dialog, figure, footer, header, hgroup, nav, section
+{
 	margin: 0;
 	padding: 0;
 	border: 0;
 	vertical-align: baseline;
 }
-article, aside, details, figcaption, figure, dialog,
-footer, header, hgroup, menu, nav, section {
+article, aside, details, figcaption, figure, dialog, footer, header, hgroup, menu, nav, section
+{
     display:block;
-	}
-table {
+}
+table
+{
 	border-collapse: separate;
 	border-spacing: 0;
-	}
-caption, th, td {
+}
+caption, th, td
+{
 	text-align: left;
 	font-weight: bold;
-	float:none !important;
-	}
-table, th, td {
+	float: none !important;
+}
+table, th, td
+{
 	vertical-align: middle;
-	}
-blockquote:before, blockquote:after, q:before, q:after { content: ''; }
-blockquote, q { quotes: "" ""; }
-a img { border: none; }
-a:active , input:active  { outline:0 none; }
--------------------------------------------------------------- */
-h1,h2,h3,h4,h5,h6 { font-weight: normal;  }
-h1 { font-size: 3em; line-height: 1; }
-h2 { font-size: 2em; }
-h3 { font-size: 1.5em; line-height: 1; }
-h5 { font-size: 1em; font-weight: bold; }
-h6 { font-size: 1em; font-weight: bold; }
-h1 img, h2 img, h3 img,
-h4 img, h5 img, h6 img {
+}
+blockquote:before, blockquote:after, q:before, q:after
+{
+    content: '';
+}
+blockquote, q
+{
+    quotes: "" "";
+}
+a img
+{
+    border: none;
+}
+a:active , input:active   
+{
+    outline:0 none;
+}
+h1, h2, h3, h4, h5, h6
+{
+    font-weight: normal;
+}
+h1
+{
+    font-size: 3em; line-height: 1;
+}
+h2
+{
+    font-size: 2em;
+}
+h3
+{
+    font-size: 1.5em; line-height: 1;
+}
+h5
+{
+    font-size: 1em; font-weight: bold;
+}
+h6 
+{
+    font-size: 1em; font-weight: bold;
+}
+h1 img, h2 img, h3 img, h4 img, h5 img, h6 img
+{
   margin: 0;
 }
--------------------------------------------------------------- */
-  These can be used to pull an image at the start of a paragraph, so
-  that the text flows around it (usage: <p><img class="left">Text</p>)
-.left       { float: left !important; }
-.right      { float: right !important; }
-.wdth-auto { width:auto !important; }
-.mrgn-top { margin-top:10px !important; }
-.mrgn-rht { margin-right:10px !important; }
-.aln-cntr { text-align:center !important; }
-a:focus,
-a:hover     { color: #3189d3; text-decoration: underline; }
-a           { text-decoration: none; }
-blockquote  { margin: 1.5em; color: #666; font-style: italic; }
-strong,dfn  { font-weight: bold; }
-em,dfn      { font-style: italic; }
-sup, sub    { line-height: 0; }
-3abbr,
-acronym     { border-bottom: 1px dotted #666; }
-address     { margin: 0 0 1.5em; font-style: italic; }
-del         { color:#666; }
-pre         { margin: 1.5em 0; white-space: pre; }
-pre,code,tt { font: 1em 'andale mono', 'lucida console', monospace; line-height: 1.5; }
--------------------------------------------------------------- */
-li ul,
-li ol  { margin: 0; }
-ul, ol { margin: 0;}
-ul     { list-style-type: none; }
-ol     { list-style-type: decimal; }
-dl     { margin: 0 0 1.5em 0; }
-dl dt  { font-weight: bold; }
-dd     { margin-left: 1.5em;}
--------------------------------------------------------------- */
-  Because of the need for padding on TH and TD, the vertical rhythm
-  on table cells has to be 27px, instead of the standard 18px or 36px
-  of other elements.
-table         { margin-bottom: 1.4em; width:100%; }
-th            { font-weight: bold; }
-thead th      { background:#e1e1e1; color:#fff; }
-  You can zebra-stripe your tables in outdated browsers by adding
-  the class "even" to every other table row.
-tbody tr:nth-child(even) td,
-tbody tr.even td  {
+.left        
+{
+    float: left !important;
 }
-tfoot       { font-style: normal; }
-tfoot td      { background:url(../images/sprite.png) 0px -260px repeat-x #fff; color:#000; }
-caption     { background: #eee; }
+.right       
+{
+    float: right !important;
+}
+.wdth-auto  
+{
+    width: auto !important;
+}
+.mrgn-top 
+{ 
+    margin-top:10px !important; 
+}
+.mrgn-rht  
+{
+    margin-right:10px !important;
+}
+.aln-cntr
+{
+    text-align:center !important;
+}
+a:focus, a:hover
+{
+    color: #3189d3; text-decoration: underline;
+}
+a           
+{
+    text-decoration: none;
+}
+blockquote   
+{
+    margin: 1.5em; color: #666; font-style: italic;
+}
+strong, dfn   
+{
+    font-weight: bold;
+}
+em, dfn       
+{
+    font-style: italic;
+}
+sup, sub     
+{
+    line-height: 0;
+}
+abbr, acronym
+{
+    border-bottom: 1px dotted #666;
+}
+address     
+{
+    margin: 0 0 1.5em; font-style: italic;
+}
+del          
+{
+    color:#666;
+}
+pre          
+{
+    margin: 1.5em 0; white-space: pre;
+}
+pre, code, tt  
+{
+    font: 1em 'andale mono', 'lucida console', monospace; line-height: 1.5;
+}
+li ul, li ol
+{
+    margin: 0;
+}
+ul, ol  
+{
+    margin: 0;
+}
+ul      
+{
+    list-style-type: none;
+}
+ol      
+{
+    list-style-type: decimal;
+}
+dl      
+{
+    margin: 0 0 1.5em 0;
+}
+dl dt   
+{
+    font-weight: bold;
+}
+dd      
+{
+    margin-left: 1.5em;
+}
+table          
+{
+    margin-bottom: 1.4em; width:100%;
+}
+th             
+{
+    font-weight: bold;
+}
+thead th       
+{
+    background:#e1e1e1; color:#fff;
+}
+ 
+tbody tr:nth-child(even) td, tbody tr.even td
+{
+}
+tfoot        
+{
+    font-style: normal;
+}
+tfoot td       
+{
+    background:url(../images/sprite.png) 0px -260px repeat-x #fff; color:#000;
+}
+caption      
+{
+    background: #eee;
+}
 textarea 
 {
     background: none;
@@ -194,7 +336,8 @@ textarea
     outline:none !important;
     word-wrap: break-word;
 } 
-input{
+input
+{
 	font-size: 1.7em;
 	line-height: 1;
 }
@@ -208,26 +351,31 @@ input{
 	background: #eeeeee;
  }
  
- .loading img{
+ .loading img
+ {
 	position: absolute;
 	top: 45%;
 	left: 45%;
 }
-::-webkit-scrollbar {
+::-webkit-scrollbar
+{
     width: 12px;
 }
  
-::-webkit-scrollbar-track {
+::-webkit-scrollbar-track
+{
     background:#b5b4b4;
     border-radius: 10px;
 }
  
-::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb
+{
     border-radius: 10px;
     background:#333333;
     height:29px;
 }
-#app-container{
+#app-container
+{
 	width:100%;
 	height:100%;
 	margin:0px auto;
@@ -236,30 +384,36 @@ input{
 	height: 521px;
 	display: block;
 }
-.tubular-logo{
+.tubular-logo
+{
 	position:absolute;
 	bottom:2.5%;
 	right:2.5%;
 	width:12%;
 }
-.carousel_best{
+.carousel_best
+{
 	width:45%;
 	float:right;
 	position:relative;
 	height:100%;
 }
-.carousel_best .carousel_inner{
+.carousel_best .carousel_inner
+{
 	float: left;
 	width: 100%;
 	height: 100%;
 }
-.visible{
+.visible
+{
 	display:block !important;
 }
-.invisible{
+.invisible
+{
 	display:none !important;
 }
-.page{
+.page
+{
 	margin: 0px auto;
 	display: block;
 	padding: 20px 0 0;
@@ -267,7 +421,8 @@ input{
 	height:86%;
 	max-width:1180px;
 }
-.title{
+.title
+{
 	width: 87%;
 	margin: 0;
 	padding-left: 0%;
@@ -277,7 +432,8 @@ input{
 	font-weight: normal;
 	line-height:1em;
 }
-.block-title {
+.block-title
+{
 	float: left;
 	width: 82%;
 	font-size:1.6em;
@@ -287,29 +443,30 @@ input{
 	border-bottom: 0.06em solid #A7A7A7;
 	line-height:1em;
 }
-.loading-div, .pop-up{
+.loading-div, .pop-up
+{
 	display:none;
 }
-	background:#026BBE !important;
-}*/
-.video-control#video-control{
+.video-control#video-control
+{
 	position:absolute;
 	bottom:0%;
 }
-.panel_left{
+.panel_left
+{
 	margin-top: 3%;	
 	width:34%;
 	float: left;
-	
 }
-.panel_right{
+.panel_right
+{
 	float: left;
 	margin-left: 6%;
 	width: 40%;
 	margin-top:3%;
-	
 }
-#imgCC{
+#imgCC
+{
 	position: absolute;
 	bottom: 1%;
 	right: 0%;
@@ -318,7 +475,8 @@ input{
 	float: right;
 	left: 88%;
 }
-#imgFS{
+#imgFS
+{
 	position: absolute;
 	bottom: 0%;
 	right: 0%;
@@ -327,38 +485,47 @@ input{
 	float: right;
 	left: 95%;
 }
-.crsl-live{
+.crsl-live
+{
 	float:left;
 	width:25%;
 }
-#carouselItems .item-1  .crsl-live{
+#carouselItems .item-1  .crsl-live
+{
 	float:left;
 	width:33%;	
 }
-#carouselItems .item-1 .crsl-live img{
+#carouselItems .item-1 .crsl-live img
+{
 	border: 0.3em solid #868686;
 	border-radius: 0.4em 0.4em 0 0;
 }
-#carouselItems.container.list{
+#carouselItems.container.list
+{
 	float: left;
 	width: 100%;
 }
-#carouselItems.container.vertical{
+#carouselItems.container.vertical
+{
 	height:66%;
 	margin:5% 0;
 }
-.carouselLI{
+.carouselLI
+{
 	float:left;
 	width:100%;
 }
-#carouselItems .item-0.focused,#carouselItems .item-1.focused,#carouselItems .item-2.focused,#carouselItems .item-3.focused{
+#carouselItems .item-0.focused, #carouselItems .item-1.focused, #carouselItems .item-2.focused, #carouselItems .item-3.focused
+{
 	border:0.3em solid #026bbe !important;;
 }
-#carouselItems .item-1.focused #crslbuy{
+#carouselItems .item-1.focused #crslbuy
+{
 	background:#026bbe;
 	border:0.12em solid #026bbe;
 }
-#carouselItems .item-1 {
+#carouselItems .item-1
+{
 	position: absolute;
 	display: block;
 	margin-top: 32%;
@@ -366,7 +533,8 @@ input{
 	width:100%;
 	left:0;
 }
-#carouselItems .item-2{
+#carouselItems .item-2
+{
 	position:absolute;
 	display: block;
 	margin-top: 77%;
@@ -374,73 +542,32 @@ input{
 	width:100%;
 	left:0;
 }
-.carouselLI img{
+.carouselLI img
+{
 	float: left;
 	width: 97%;
 	margin-right: 5%;
 }
-.control #carouselItems .item-0 img, .control #carouselItems .item-1 img{
+.control #carouselItems .item-0 img, .control #carouselItems .item-1 img
+{
 	width: 100%;
 	height: auto;
 	border: 0.3em solid #868686;
 	border-radius: 0.4em;
 }
-.control #carouselItems .item-1 img{	
+.control #carouselItems .item-1 img
+{	
 	width: 97%;
 	height: auto;
 }
-#crslbuy{
-	display:none;
-}
-#carouselItems .item-0, #carouselItems .item-1, #carouselItems .item-2{
+#carouselItems .item-0, #carouselItems .item-1, #carouselItems .item-2
+{
 	background-color:transparent !important;
 }
-#carouselItems .item-0 #imagePanel img, #carouselItems .item-2 #imagePanel img{
+#carouselItems .item-0 #imagePanel img, #carouselItems .item-2 #imagePanel img
+{
 	border: 0.2em solid #999;
 	border-radius:0.3em;
-}
-#carouselItems .item-1 #crslbuy{
-	text-align:center;
-	color:#fff;
-	width:100%;
-	background:#868686;
-	font-size:1.5em;
-	line-height:1.2em;
-	display:block;
-	border-radius: 0.2em;
-	border: 0.12em solid #868686;
-}
-.carouselLI #playingNow{
-	float:right;
-	width:70%;
-}
-.carouselLI #prodprice{
-	float:right;
-	width:70%;
-}
-.carouselLI #prodname{
-	float:right;
-	width:70%;
-}
-#carouselItems .item-1 #playingNow{
-	width:63%;
-}
-#carouselItems .item-1 #prodprice{
-	width:63%;
-	display: block;
-	color: #777;
-	margin-bottom: 2%;
-	font-size:1.6em;
-}
-#carouselItems .item-1 #prodname{
-	width:63%;
-	font-size:1.2em;
-}
-.divDownArrow,.divUpArrow
-{
-	float: right;
-	width: 30%;
-	height: 4%;
 }
 .loadingMsg
 {
@@ -472,14 +599,17 @@ input{
 	border-radius: 0;
 	z-index:100;
 }
-#pnlHeader{
+#pnlHeader
+{
 	font-size:2em;
 }
-#home-tilelistTop .control.tile.visible.focused .label,#home-tilelistMiddle .control.tile.visible.focused .label, #home-tilelistBottom .control.tile.visible.focused .label {
+#home-tilelistTop .control.tile.visible.focused .label,#home-tilelistMiddle .control.tile.visible.focused .label, #home-tilelistBottom .control.tile.visible.focused .label
+{
 	background: #026bbe;
 }
 /************************************************** list.css **************************************************/
-.list{
+.list
+{
 	width: 84%;
 	margin-top: 3%;
 	padding: 0;
@@ -489,7 +619,8 @@ input{
 	height: 30%;
 }
 /************************************************** tile.css **************************************************/
-.list{
+.list
+{
 	width: 84%;
 	margin-top: 3%;
 	padding: 0;
@@ -498,20 +629,24 @@ input{
 	margin-right: auto;
 	height: 30%;
 }
-.tile{
+.tile
+{
 	display: inline;
 	float: left;	
 	width:15%;
 }
-.tile img{
+.tile img
+{
 	width:100%;
 	float:left;
 }
-div.control.tile {
+div.control.tile
+{
     border: 0.3em solid #868686;
 	border-radius: 0.3em;
 }
-.tile div{
+.tile div
+{
 	text-align: center;
 	bottom: 0;
 	padding: 1% 0%;
@@ -524,17 +659,20 @@ div.control.tile {
 	font-weight:normal;
 }
 /************************************************** video.css **************************************************/
-.video{
+.video
+{
 	background:#000 !important;
 	margin-left:auto;
 	margin-right:auto;	
 	position:relative;	
 }
-.video video{
+.video video
+{
 	width:100%;
 	height:100%;
 }
-.control #caption{
+.control #caption
+{
 	position: absolute;
 	bottom: 0%;
 	right: 0%;
@@ -554,7 +692,7 @@ div.control.tile {
 	left: 92%;
 }
 .control #overlay
-	{
+{
 	float: left;
 	position: absolute;
 	bottom: 13.53%;
@@ -564,8 +702,8 @@ div.control.tile {
 	text-align: center;
 	padding: 0.1% 0%;
 }
-	
-#home-video-fullscreen #overlay	{
+#home-video-fullscreen #overlay
+{
 	float: left;
 	position: absolute;
 	bottom: 13.7%;
@@ -582,7 +720,6 @@ div.control.tile {
     bottom: 0%;
     width: 100%;
     float: left;
-    opacity: 0.7;*/
 }
 .video-minimise-background
 {
@@ -591,7 +728,7 @@ div.control.tile {
     padding-top:0%; 
     height:7.3%;   
 }
-.videoactive , .videoinactive 
+.videoactive, .videoinactive 
 {
     padding: 0 0.5%;
     width:4%; 
@@ -615,11 +752,13 @@ div.control.tile {
 {
     display:none;
 }
-.carouselVideo{
+.carouselVideo
+{
 	width:50%;
 	position:relative;
 }
-.carouselVideo video {
+.carouselVideo video
+{
     width:100%;
     background-color:#000;
     display:block;
@@ -630,10 +769,12 @@ div.control.tile {
 {
     border:0.4em solid #026BBE;
 }
-.carouselVideo h3 {
+.carouselVideo h3
+{
 	float:left;
 }
-.carouselVideo p {
+.carouselVideo p 
+{
 	margin:0;
 	padding:0;
 	float:left;
@@ -644,7 +785,7 @@ div.control.tile {
     width:84.1%;
     float:left;
 }
-.fullscreen , .productVideo.test
+.fullscreen, .productVideo.test
 {
     top: 0px;
     left: 0px;
@@ -652,11 +793,11 @@ div.control.tile {
     margin: 0;
     padding: 0;
 }
-.fullscreen .productVideoControl , .fullscreen .videozoom 
+.fullscreen .productVideoControl, .fullscreen .videozoom 
 {
     background:none;
 }
-.fullscreen , .carouselVideo.fullscreen video 
+.fullscreen, .carouselVideo.fullscreen video 
 {
     width:100%;
     height:99.5%;
@@ -667,7 +808,8 @@ div.control.tile {
     outline:none !important;
     background:#000;
 }
-.disclaimer{
+.disclaimer
+{
     color: #777;
     font-size: 1.0em;
     font-weight:normal;

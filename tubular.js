@@ -843,8 +843,7 @@ System.control.html.Div = function (args) {
 System.control = System.control || {};
 System.control.html = System.control.html || {};
 System.control.html.Image = function (args) {
-    
-    var self =System.type.extend(System.control.html.Base, { element: "img" });
+    var self = System.type.extend(System.control.html.Base, { element: "img" });
     (function () {
         var _value = "component";
         self.type = function () {
@@ -1138,7 +1137,7 @@ System.control.Base = function (args) {
 /************************************************** container.js **************************************************/
 System.control = System.control || {};
 System.control.Container = function (args) {
-    var self =System.type.extend(System.control.html.Div, args);
+    var self = System.type.extend(System.control.html.Div, args);
     (function () {
         var _value = "container";
         self.type = function () {
@@ -1220,23 +1219,6 @@ System.control.ImageTile = function (args) {
     })();
     (function () {
         var _value;
-        var setWebPID = function (value) {
-            _value = value;
-        };
-        var getWebPID = function () {
-            return _value;
-        };
-        self.webPID = function (value) {
-            if (typeof value !== "undefined" && value !== null) {
-                setWebPID(value);
-            }
-            else {
-                return getWebPID();
-            }
-        };
-    })();
-    (function () {
-        var _value;
         var setTag = function (value) {
             _value = value;
         };
@@ -1286,7 +1268,7 @@ System.control.ImageTile = function (args) {
 /************************************************** logo.js **************************************************/
 System.control = System.control || {};
 System.control.Logo = function (args) {
-    var self =System.type.extend(System.control.html.Image, args);
+    var self = System.type.extend(System.control.html.Image, args);
         (function () {
             var _value = "component";
             self.type = function () {
@@ -1909,7 +1891,7 @@ System.control.Panel = function (args) {
 /************************************************** label.js **************************************************/
 System.control = System.control || {};
 System.control.Label = function (args) {
-    var self =System.type.extend(System.control.Component, args);
+    var self = System.type.extend(System.control.Component, args);
     self.addClass("label");
     (function (args) {
         if (typeof args !== "undefined" && args !== null) {
@@ -1965,33 +1947,15 @@ System.control.Dropdown = function (args) {
         navigation: { down: "", up: "", left: "", right: "" }
     });
     self.items = function (value) {
-        if (value.length < 6) {
-            self.list.visibleItemCount(value.length);
-        }
-        if (self.id() == "flexpay-items") {
-            self.list.visibleItemCount(2);
-        }
         for (var ii = 0; ii < value.length; ii++) {
             if (typeof value[ii].name != "undefined" && value[ii].name != null) {
                 var _class, _name = value[ii].name();
-                if (typeof value[ii].so != "undefined" && value[ii].so != null) {
-                    if (value[ii].so() == true) {
-                        _class = "unselectable invisible";
-                        _name = "(Sold-Out) " + value[ii].name();
-                    }
-                    else {
-                        _class = "invisible";
-                    }
-                }
                 self.list.addItem(new System.control.Dropdownitem({
                     id: "item-" + (ii + 1),
                     class: _class,
                     label: _name,
                     value: value[ii].code(),
                     type: value[ii].type(),
-                    so: value[ii].so(),
-                    webID: value[ii].webID(),
-                    sku: value[ii].sku(),
                     events: {
                         click: function () {
                             self.page = new System.application.currentPage();
@@ -1999,139 +1963,9 @@ System.control.Dropdown = function (args) {
                             self.defaultdiv.visible(true);
                             self.list_div.addClass('invisible');
                             self.list_div.visible(false);
-                            self.toggleDiv(false, "");
-                            var _panel = self.getPanelID(self.id());
-                            self.selectedValue(_panel.list.currentIndex());
-                            self.displayText.text(_panel.list.current().label());
-                            self.page.focus(_panel);
-                            if (self.id() != "quantity-items") {
-                                _panel.removeNavigation("down");
-                                _panel.addNavigation("down", self.page.options[self.page.options.indexOf(self.id()) + 1]);
-                            }
-                            if ((self.page.detail.variants().levels() == 1 && self.id() == "variant1-items")
-                            || (self.page.detail.variants().levels() == 2 && self.id() == "variant2-items")
-                            || (self.page.detail.variants().levels() == 3 && self.id() == "variant3-items")) {
-                                self.page.PreviousOption.removeNavigation("up");
-                                self.page.PreviousOption.addNavigation("up", "btnContinue");
-                            } else {
-                                self.page.PreviousOption.removeNavigation("up");
-                                self.page.PreviousOption.addNavigation("up", self.page.options[self.page.options.indexOf(self.id()) + 1]);
-                            }
                         }
                     }
                 }));
-            }
-            else if (typeof value[ii].label != "undefined" && value[ii].label != null) {
-                var _label = value[ii].label(), _value = value[ii].value(), _flag = false;
-                if (self.id() == "flexpay-items") {
-                    if (ii === 0 || ii === (value.length - 1)) {
-                        _flag = true;
-                    }
-                    _label = value[ii].label() + " of " + value[ii].value();
-                    _value = value[ii].label() + " of " + value[ii].value();
-                } else if (self.id() == "warranty-items") {
-                    _flag = true;
-                    if (ii != 0) {
-                        _label = "Add a " + value[ii].label() + " for $" + value[ii].value();
-                        _value = "Add a " + value[ii].label() + " for $" + value[ii].value();                        
-                    }
-                }
-                if (ii == 0) {
-                    if (typeof self.displayText.text !== "undefined" && self.displayText.text !== null) {
-                        self.selectedText(_label);
-                    }
-                }
-                if (_flag) {
-                    self.list.addItem(new System.control.Dropdownitem({
-                        id: "item-" + ii,
-                        label: _label,
-                        value: _value,
-                        events: {
-                            click: function () {
-                                self.defaultdiv.removeClass('invisible');
-                                self.defaultdiv.visible(true);
-                                self.list_div.addClass('invisible');
-                                self.list_div.visible(false);
-                                self.toggleDiv(false, "");
-                                var _panel = self.getPanelID(self.id());
-                                self.selectedValue(_panel.list.currentIndex());
-                                self.displayText.text(_panel.list.current().label());
-                                self.page.focus(_panel);
-                                if (self.id() != "quantity-items") {
-                                    _panel.removeNavigation("down");
-                                    _panel.addNavigation("down", self.page.options[self.page.options.indexOf(self.id()) + 1]);
-                                }
-                            }
-                        }
-                    }));
-                }
-            }
-        }
-    };
-    self.quantity = function (value) {
-        self.selectedText("Quantity: " + 1);
-        for (var ii = 1; ii <= value; ii++) {
-            self.list.addItem(new System.control.Dropdownitem({
-                id: "item-" + ii,
-                label: "Quantity: " + ii,
-                value: ii,
-                events: {
-                    click: function () {
-                        self.defaultdiv.removeClass('invisible');
-                        self.defaultdiv.visible(true);
-                        self.list_div.addClass('invisible');
-                        self.list_div.visible(false);
-                        self.toggleDiv(false, "");
-                        var _panel = self.getPanelID(self.id());
-                        self.selectedValue(_panel.list.currentIndex());
-                        self.displayText.text(_panel.list.current().label());
-                        self.page.focus(_panel);
-                    }
-                }
-            }));
-        }
-    };
-    self.getPanelID = function (id) {
-        var _panel;
-        switch (id) {
-            case "variant1-items":
-                _panel = self.page.panelItem1;
-                break;
-            case "variant2-items":
-                _panel = self.page.panelItem2;
-                break;
-            case "variant3-items":
-                _panel = self.page.panelItem3;
-                break;
-            case "flexpay-items":
-                _panel = self.page.panelItem4;
-                break;
-            case "warranty-items":
-                _panel = self.page.panelItem5;
-                break;
-            case "quantity-items":
-                _panel = self.page.panelItem6;
-                break;
-        }
-        return _panel;
-    };
-    self.toggleDiv = function (flag, id) {
-        self.page = new System.application.currentPage();
-        var _panell = self.page.options;
-        for (var ii = 0; ii < _panell.length; ii++) {
-            if (flag) {
-                if (self.getPanelID(_panell[ii]).defaultdiv.visible()) {
-                    self.getPanelID(_panell[ii]).defaultdiv.addClass("invisible");
-                    if (id != _panell[ii]) {
-                        self.getPanelID(_panell[ii]).addClass("invisible");
-                    }
-                }
-            }
-            else {
-                if (self.getPanelID(_panell[ii]).defaultdiv.visible()) {
-                    self.getPanelID(_panell[ii]).removeClass("invisible");
-                    self.getPanelID(_panell[ii]).defaultdiv.removeClass("invisible");
-                }
             }
         }
     };
@@ -2157,7 +1991,7 @@ System.control.Dropdown = function (args) {
 /************************************************** dropdownitem.js **************************************************/
 System.control = System.control || {};
 System.control.Dropdownitem = function (args) {
-    var self =System.type.extend(System.control.Base, args);   
+    var self = System.type.extend(System.control.Base, args);
     var _text = new System.control.Label();
     (function () {
         var _value = "";
@@ -2208,57 +2042,6 @@ System.control.Dropdownitem = function (args) {
             }
             else {
                 return getType();
-            }
-        }
-    })();
-    (function () {
-        var _value = "";
-        var setSO = function (value) {
-            _value = value;
-        }
-        var getSO = function () {
-            return _value;
-        }
-        self.so = function (value) {
-            if (typeof value !== "undefined" && value !== null) {
-                setSO(value);
-            }
-            else {
-                return getSO();
-            }
-        }
-    })();
-    (function () {
-        var _value = "";
-        var setWebID = function (value) {
-            _value = value;
-        }
-        var getWebID = function () {
-            return _value;
-        }
-        self.webID = function (value) {
-            if (typeof value !== "undefined" && value !== null) {
-                setWebID(value);
-            }
-            else {
-                return getWebID();
-            }
-        }
-    })();
-    (function () {
-        var _value = "";
-        var setSKU = function (value) {
-            _value = value;
-        }
-        var getSKU = function () {
-            return _value;
-        }
-        self.sku = function (value) {
-            if (typeof value !== "undefined" && value !== null) {
-                setSKU(value);
-            }
-            else {
-                return getSKU();
             }
         }
     })();
@@ -2650,7 +2433,7 @@ System.control.Reviewtile = function (args) {
     var _title = new System.control.Label({ class: "rvwTitle" });
     var _address = new System.control.Label({ class: "rvwAddress" });
     var _image = new System.control.ReviewStar({ class: "rvwRating" });
-    var _comment = new System.control.Label({id:"rvwComment", class: "rvwComment" });
+    var _comment = new System.control.Label({ id: "rvwComment", class: "rvwComment" });
     var _state = new System.control.Label({ class: "rvwAddress" });
     (function () {
         var _value = "";
@@ -2728,7 +2511,7 @@ System.control.Reviewtile = function (args) {
 /************************************************** reviewstar.js **************************************************/
 System.control = System.control || {};
 System.control.ReviewStar = function (args) {
-    var self =System.type.extend(System.control.Container, args); 
+    var self = System.type.extend(System.control.Container, args);
     var _image = new System.control.html.Image();
     var _text = new System.control.Label();
     (function () {
@@ -2800,23 +2583,6 @@ System.control = System.control || {};
 System.control.Carousel = function (args) {
     var self = System.type.extend(System.control.Base, args);
     var imageContainer = System.type.extend(System.control.Tile, args);
-    (function () {
-        var _value = "";
-        var setWebPID = function (value) {
-            _value = value;
-        }
-        var getWebPID = function () {
-            return _value;
-        }
-        self.webPid = function (value) {
-            if (typeof value !== "undefined" && value !== null) {
-                setWebPID(value);
-            }
-            else {
-                return getWebPID();
-            }
-        }
-    })();
     self.url = function (value) {
         return value;
     };
@@ -2841,13 +2607,14 @@ System.control.Carousel = function (args) {
             }
     }
 })(args);
-return self;
+    return self;
 };
 /************************************************** carousellist.js **************************************************/
 System.control = System.control || {};
 System.control.Carousellist = function (args) {
     var self = System.type.extend(System.control.Base, args);
     self.class("carousel_inner");
+    
     (function (args) {
         if (typeof args !== "undefined" && args !== null) {
             var _crslitem;
@@ -2889,7 +2656,7 @@ System.control.Carousellist = function (args) {
 /************************************************** loading.js **************************************************/
 System.control = System.control || {};
 System.control.Loading = function (args) {
-    var self =System.type.extend(System.control.Component, args);
+    var self = System.type.extend(System.control.Component, args);
     self.addClass("loading");
     (function (args) {
         if (typeof args !== "undefined" && args !== null) {
@@ -2911,7 +2678,7 @@ System.control.Loading = function (args) {
 /************************************************** popup.js **************************************************/
 System.control = System.control || {};
 System.control.Popup = function (args) {
-    var self =System.type.extend(System.control.Container, args);
+    var self = System.type.extend(System.control.Container, args);
     self.addClass("popup");
     (function (args) {
         if (typeof args !== "undefined" && args !== null) {
@@ -2921,18 +2688,18 @@ System.control.Popup = function (args) {
             if (typeof args.class !== "undefined" && args.class !== null) {
                 self.class(args.class);
             }
-             self.addItem(new System.control.Label({
+            self.addItem(new System.control.Label({
                 id: "txtmsg",
                 class: "",
-                text: "For security purposes, you will be automatically logged out of tubular Shop by Remote due to inactivity. Please select “OK” if you want to prevent this and continue shopping."
+                text: "Please select 'OK' to contine..."
             }));
-            self.btnOk=new System.control.Button({
+            self.btnOk = new System.control.Button({
                 id: "btnPopup",
                 class: "popup-button",
                 text: "OK",
                 events: {
                     click: function () {
-                        console.log("buy button Click Event!");
+                        console.log("Click Event!");
                     }
                 }
             });
@@ -2945,7 +2712,7 @@ System.control.Popup = function (args) {
 /************************************************** input.js **************************************************/
 System.control = System.control || {};
 System.control.TextBox = function (args) {
-    var self =System.type.extend(System.control.Base, args);
+    var self = System.type.extend(System.control.Base, args);
     var _input = new System.control.html.Input();
     (function () {
         var setValue = function (value) {
@@ -3033,7 +2800,6 @@ System.control.Component = function (args) {
 System.control = System.control || {};
 System.control.Image = function (args) {
     var self =System.type.extend(System.control.Base, args);
-    
     var _image = new System.control.html.Image();
     var _text = new System.control.Label();
     (function () {
@@ -3046,23 +2812,6 @@ System.control.Image = function (args) {
             _text.text(value);
         };
     })();
-    (function () {
-        var _value;
-        var setWebPID = function (value) {
-            _value = value;
-        };
-        var getWebPID = function () {
-            return _value;
-        };
-        self.webPID = function (value) {
-            if (typeof value !== "undefined" && value !== null) {
-                setWebPID(value);
-            }
-            else {
-                return getWebPID();
-            }
-        };
-    })();  
     (function (args) {
         if (typeof args !== "undefined" && args !== null) {
             if (typeof args.source !== "undefined" && args.source !== null) {
@@ -3083,7 +2832,7 @@ System.control.Image = function (args) {
 /************************************************** base.js **************************************************/
 System.page = System.page || {};
 System.page.Base = function (args) {
-    var self =System.type.extend(System.control.html.Div, args);
+    var self = System.type.extend(System.control.html.Div, args);
     (function () {
         var _value;
         var setFocusedControl = function (value) {

@@ -22,11 +22,12 @@
 * THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-.hello-world{
+.hello-world
+{
 	font-size: 4em;
 }
 
 #Home div
 {
-	align:center;
+	align: center;
 }
