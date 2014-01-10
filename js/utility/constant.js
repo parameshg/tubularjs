@@ -10,14 +10,10 @@ var System = (function (base) {
     var self = {};
     self.page = {};
 
-    //Property: constant
+    // property: constant
     (function () {
         var _container = "app-container";
         var _pageDefault = "Home";
-        var _pageGridStoreFront = "GridStoreFront";
-        var _pageListStoreFront = "ListStoreFront";
-        var _pageVideoStoreFront = "VideoStoreFront";
-        var _pageSearch = "Search";
 
         self.container = function () {
             return _container;
@@ -26,23 +22,6 @@ var System = (function (base) {
         self.page.home = function () {
             return _pageDefault;
         };
-
-        self.page.gridStoreFront = function () {
-            return _pageGridStoreFront;
-        };
-
-        self.page.listStoreFront = function () {
-            return _pageListStoreFront;
-        };
-
-        self.page.videoStoreFront = function () {
-            return _pageVideoStoreFront;
-        };
-
-        self.page.search = function () {
-            return _pageSearch;
-        };
-
     })();
 
     base.utility.constant = self;
